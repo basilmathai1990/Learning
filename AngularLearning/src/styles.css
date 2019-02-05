@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+
+body, html {
+    height: 100%;
+  }
+.loginBgImage{
+    background-image: url("../src/assets/images/backEmp.png");
+    background-size: 100% 100%;
+    background-size: cover;
+    
+}
+.customerContainer{
+    background-image: url("../src/assets/images/customerBg.jpg");
+    background-size: 100% 100%;
+    background-size: cover;
+}
+.innerContainer{
+    background-image: url("../src/assets/images/container.jpg");
+    background-size: 100% 100%;
+    background-size: cover;
+}
+
+.underConstructionContainer{
+    background-image: url("../src/assets/images/puc.jpg");
+    background-size: 100% 100%;
+}
+.pageNotFound{
+    background-image: url("../src/assets/images/pnf.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: 100% 100%;
+    /* background-size: cover;  */
+}
+.containter50{
+    margin-top:50px;
+}
+.boarder-radius{
+    border-bottom-left-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+}
+
+.help-block{
+    color:red;
+    }
+
+    .panel {
+        margin-bottom: 20px;
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+    .panel-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: inherit;
+    }
+    
+    .panel-info {
+        border-color: #bce8f1;
+    }
+    
+    .panel-heading {
+        padding: 10px 15px;
+        border-bottom: 1px solid transparent;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    .panel-info>.panel-heading {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+        /* font-weight: bold; */
+    }
+    
+    .panel-body {
+        padding: 15px;
+    }
+    .panel-pad{
+        padding-top:30px;
+    }
+
+    .input-group-addon {
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .input-group-addon:first-child {
+        border-right: 0;
+    }

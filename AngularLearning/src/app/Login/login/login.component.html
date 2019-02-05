@@ -1,0 +1,64 @@
+<div class="container w-100 h-100">
+  <div class="row">
+    <div class=" col-md-3 col-md-offset-3 col-sm-2 col-sm-offset-2"></div>
+    <div id="loginbox" class="mainbox containter50 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 loginbox">
+      <div class="panel panel-info boarder-radius">
+        <div class="panel-heading">
+          <div class="panel-title"> Sign In </div>
+          <div class="forgot-password"> <a href="#">Forgot password?</a> </div>
+        </div>
+        <div class="panel-body panel-pad">
+          <div id="login-alert" class="alert alert-danger col-sm-12 login-alert"></div>
+          <form [formGroup]="loginForm" (ngSubmit)="login()" id="loginform" class="form-horizontal" role="form">
+            <div class="input-group margT25">
+              <span class="input-group-addon">
+                <i class="fa fa-user"></i>
+              </span>
+              <input id="login-username" formControlName="userid" type="text" class="form-control" name="userid" value=""
+                placeholder="username or email">
+              <span *ngIf="(f.userid.dirty || f.userid.touched ) || submitted && f.userid.errors" class="help-block">
+                <span *ngIf="f.userid.errors && f.userid.errors.required">*</span>
+              </span>
+            </div>
+            <div class="input-group margT25">
+              <span class="input-group-addon"><i class="fa fa-key"></i></span>
+              <input id="login-password" type="password" formControlName="password" class="form-control" name="password"
+                placeholder="password">
+              <span *ngIf="(f.password.dirty || f.password.touched ) || submitted && f.password.errors" class="help-block">
+                <span *ngIf="f.password.errors && f.password.errors.required">*</span>
+              </span>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-12 controls">
+                <p *ngIf="message" class="text-center error">{{message}}</p>
+              </div>
+
+            </div>
+            <div class="input-group">
+              <div class="checkbox">
+                <label>
+                  <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                </label>
+              </div>
+            </div>
+            <div class="form-group margT10">
+              <!-- Button -->
+              <div class="col-sm-12 controls">
+                <button id="btn-login" type="submit" href="#" class="btn btn-block btn-success">Login </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12 control">
+                <div class="no-acc">
+                  Don't have an account!
+                  <a href="#"> Sign Up Here </a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class=" col-md-3 col-md-offset-3 col-sm-2 col-sm-offset-2"></div>
+  </div>
+</div>
