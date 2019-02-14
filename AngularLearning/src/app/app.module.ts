@@ -18,7 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 //************ Custom module section **********/
 
 import { CustomerModule } from './Customer/customer.module';
-import { ErrorModule } from './Shared/error/error.module';
+import { ErrorModule } from './Error/error.module';
 import { AppstatemanagerService } from './Services/appstate/appstatemanager.service';
 import { UserModule } from './Login/user.module';
 import { SharedModule } from './Shared/shared.module';
