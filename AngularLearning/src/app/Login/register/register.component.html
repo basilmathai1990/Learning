@@ -1,3 +1,137 @@
-<p>
-  register works!
-</p>
+<div class="container w-100 h-100">
+  <div class="row centered-form">
+    <div class=" col-md-3 col-md-offset-3 col-sm-2 col-sm-offset-2"></div>
+    <div class="col-md-6 col-sm-6  col-sm-offset-2 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Please sign up for Employee Portal <small>It's free!</small></h3>
+        </div>
+        <div class="panel-body">
+          <form role="form" [formGroup]="registerForm" (ngSubmit)="register()">
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+
+                  <input type="text" formControlName="firstname" name="firstname" id="firstname"
+                    class="form-control input-sm" placeholder="First Name" />
+
+                  <div *ngIf="((f.firstname.dirty || f.firstname.touched ) || submitted) && f.firstname.errors "
+                    class="tooltip1 has-error in bottom" id="bs-error-firstname" role="tooltip1">
+                    <div class="tooltip-inner">
+                      <i class="fa fa-exclamation-triangle"></i>
+                      <span *ngIf="f.firstname.errors && f.firstname.errors.required"> First name is required</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+
+                <div class="form-group">
+
+                  <input type="text" formControlName="lastname" name="lastname" id="lastname"
+                    class="form-control input-sm" placeholder="Last Name" />
+
+                  <div *ngIf="((f.lastname.dirty || f.lastname.touched ) || submitted ) && f.lastname.errors "
+                    class="tooltip1 has-error in bottom" id="bs-error-lastName" role="tooltip1">
+                    <div class="tooltip-inner">
+                      <i class="fa fa-exclamation-triangle"></i>
+                      <span *ngIf="f.lastname.errors && f.lastname.errors.required"> Last name is required</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="form-group">
+
+              <input formControlName="email" type="email" name="email" id="email" class="form-control input-sm"
+                placeholder="example@gmail.com" />
+
+              <div *ngIf="((f.email.dirty || f.email.touched )  || submitted) && f.email.errors "
+                class="tooltip1 has-error in bottom" id="bs-error-email" role="tooltip1">
+                <div class="tooltip-inner">
+                  <div *ngIf="f.email.errors && f.email.errors.required"><i
+                      class="fa fa-exclamation-triangle flot-left"></i> Email is required</div>
+                  <div *ngIf="f.email.errors && f.email.errors.emailVal"><i class="fa fa-exclamation-triangle"></i>
+                    Invalid email format</div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+
+                  <input formControlName="password" type="password" name="password" id="password"
+                    class="form-control input-sm" placeholder="Password" />
+
+                  <div *ngIf="((f.password.dirty || f.password.touched ) || submitted ) && f.password.errors "
+                    class="tooltip1 has-error in bottom" id="bs-error-password" role="tooltip1">
+                    <div class="tooltip-inner">
+                      <i class="fa fa-exclamation-triangle"></i>
+                      <span *ngIf="f.password.errors && f.password.errors.required"> Password is required</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+
+                  <input type="password" formControlName="cpassword" name="cpassword" id="cpassword"
+                    class="form-control input-sm" placeholder="Confirm Password" />
+
+                  <div *ngIf="((f.cpassword.dirty || f.cpassword.touched ) || submitted)  && f.cpassword.errors "
+                    class="tooltip1 has-error in bottom" id="bs-error-cpassword" role="tooltip1">
+                    <div class="tooltip-inner">
+                      <i class="fa fa-exclamation-triangle"></i>
+                      <span *ngIf="f.cpassword.errors && f.cpassword.errors.required"> Confirm password is
+                        required</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="form-group">
+
+              <textarea formControlName="address" name="address" google-places id="address"
+                (onSelect)="setAddress($event)" class="form-control input-sm" placeholder="Address">
+               </textarea>
+
+              <div *ngIf="((f.address.dirty || f.address.touched ) || submitted)  && f.address.errors"
+                class="tooltip1 has-error in bottom" id="bs-error-address" role="tooltip1">
+                <div class="tooltip-inner">
+                  <i class="fa fa-exclamation-triangle"></i>
+                  <span *ngIf="f.address.errors && f.address.errors.required"> Address is required</span>
+                </div>
+              </div>
+
+              <!-- Displaying the contents of the address object received from our event emitter -->
+              <!-- <ul style="list-style-type: none;">
+                <li *ngFor="let key of addrKeys">
+                  <span style="font-weight: bold">{{key}}</span>: <span>{{addr[key]}}</span>
+                </li>
+              </ul> -->
+
+            </div>
+
+
+            <input type="submit" value="Register" class="btn btn-info btn-block" />
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-md-offset-3 col-sm-2 col-sm-offset-2"></div>
+  </div>
+</div>

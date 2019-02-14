@@ -15,7 +15,7 @@
                 <i class="fa fa-user"></i>
               </span>
               <input id="login-username" formControlName="userid" type="text" class="form-control" name="userid" value=""
-                placeholder="username or email">
+                placeholder="username or email" />
               <span *ngIf="(f.userid.dirty || f.userid.touched ) || submitted && f.userid.errors" class="help-block">
                 <span *ngIf="f.userid.errors && f.userid.errors.required">*</span>
               </span>
@@ -51,7 +51,7 @@
               <div class="col-md-12 control">
                 <div class="no-acc">
                   Don't have an account!
-                  <a href="#"> Sign Up Here </a>
+                  <a [routerLink]="['register']"> Sign Up Here </a>
                 </div>
               </div>
             </div>
