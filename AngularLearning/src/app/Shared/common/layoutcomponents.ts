@@ -1,4 +1,5 @@
 
-import { FooterSectionComponent } from '../footer-section/footer-section.component';
+import { FooterSectionComponent } from '../components/footer-section/footer-section.component';
+
 
 export const Layoutcomponents = [FooterSectionComponent];

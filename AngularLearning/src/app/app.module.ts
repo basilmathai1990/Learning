@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { FormsModule }    from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from 'ngx-icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { CustomerModule } from './Customer/customer.module';
 import { ErrorModule } from './Shared/error/error.module';
 import { AppstatemanagerService } from './Services/appstate/appstatemanager.service';
-
+import { UserModule } from './Login/user.module';
+import { SharedModule } from './Shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -35,12 +36,14 @@ import { AppstatemanagerService } from './Services/appstate/appstatemanager.serv
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
-    CustomerModule,
-    ErrorModule,
     AppRoutingModule,
-    
+    CustomerModule,
+    UserModule,
+    ErrorModule,
+
+
   ],
-  providers: [HttpClientModule,AppstatemanagerService],
+  providers: [HttpClientModule, AppstatemanagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

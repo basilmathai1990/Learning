@@ -21,9 +21,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    Layoutcomponents,
-    LoginComponent,
-    RegisterComponent,
+    Layoutcomponents
   ],
   imports: [
     CommonModule,

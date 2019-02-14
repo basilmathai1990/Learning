@@ -16,8 +16,10 @@ export class LoginComponent implements OnInit {
   submitted: boolean = false;
 
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private appState: AppstatemanagerService) {
-   // this.appState.setState("bodyClass", "loginBgImage");
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private appState: AppstatemanagerService) {
   }
 
   ngOnInit() {

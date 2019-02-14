@@ -4,16 +4,16 @@ import { CustomerRoutes } from './customer-helper/customer-routes';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from 'ngx-icons';
 import { CustomerComponents } from './customer-helper/customer-components';
-import { DialogueComponent } from '../Shared/dialogue/dialogue.component';
+import { SharedModule } from '../Shared/shared.module';
 
 @NgModule({
   declarations: [
-    CustomerComponents,
-    DialogueComponent
+    CustomerComponents
   ],
   imports: [
     CommonModule,
     FontAwesomeModule,
+    SharedModule,
     RouterModule.forChild(CustomerRoutes)
   ],
   exports: [RouterModule]
