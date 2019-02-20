@@ -4,8 +4,13 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { FontAwesomeModule } from 'ngx-icons';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../Shared/shared.module';
+
+const userRoutes: Routes = [
+  { path: '', component: LoginComponent },
+  { path: 'register', component: RegisterComponent }
+]
 
 @NgModule({
   declarations: [
@@ -14,11 +19,12 @@ import { SharedModule } from '../Shared/shared.module';
   ],
   imports: [
     FormsModule,
+    RouterModule,
     ReactiveFormsModule,
     CommonModule,
-    RouterModule,
     FontAwesomeModule,
-    SharedModule
+    SharedModule,
+    RouterModule.forChild(userRoutes)
   ]
 })
 export class UserModule { }
