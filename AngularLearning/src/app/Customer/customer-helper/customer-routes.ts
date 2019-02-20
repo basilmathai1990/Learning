@@ -4,10 +4,10 @@ import { CustomerLayoutComponent } from '../customer-layout/customer-layout.comp
 
 export const CustomerRoutes: Routes = [
   {
-    path: 'customer', component: CustomerLayoutComponent,
+    path: '', component: CustomerLayoutComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', component: DashboardComponent },
+      { path: 'dashboard', component: DashboardComponent }
     ]
   }
 ];

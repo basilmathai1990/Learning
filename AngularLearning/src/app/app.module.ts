@@ -17,11 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 //************ Custom module section **********/
 
-import { CustomerModule } from './Customer/customer.module';
-import { ErrorModule } from './Error/error.module';
 import { AppstatemanagerService } from './Services/appstate/appstatemanager.service';
-import { UserModule } from './Login/user.module';
-import { SharedModule } from './Shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -36,12 +33,7 @@ import { SharedModule } from './Shared/shared.module';
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule,
-    CustomerModule,
-    UserModule,
-    ErrorModule,
-
-
+    AppRoutingModule
   ],
   providers: [HttpClientModule, AppstatemanagerService],
   bootstrap: [AppComponent]

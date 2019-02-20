@@ -7,16 +7,20 @@ import { FontAwesomeModule } from 'ngx-icons';
 //************ Layout section **********/
 import { Layoutcomponents } from './Shared/common/layoutcomponents';
 
-//*********** Custom components *****/
-import { LoginComponent } from './Login/login/login.component';
-import { PageNotFoundComponent } from './Shared/error/page-not-found/page-not-found.component';
-import { RegisterComponent } from './Login/register/register.component';
-
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '',
+    loadChildren: './Login/user.module#UserModule'
+  },
+  {
+    path: 'customer',
+    loadChildren: './Customer/customer.module#CustomerModule'
+  }, 
+  {
+    path: '**',
+    loadChildren: './Error/error.module#ErrorModule'
+  }
 ];
 
 @NgModule({
@@ -28,7 +32,7 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    RouterModule.forRoot(routes, { useHash: true })
+    RouterModule.forRoot(routes, { useHash: true }),
   ],
   exports: [RouterModule]
 })

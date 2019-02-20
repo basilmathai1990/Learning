@@ -5,13 +5,16 @@ import { DialogueComponent } from './components/dialogue/dialogue.component';
 import { GooglePlacesDirective } from './directives/google/google-places.directive';
 import { VarDirective } from './directives/var/var.directive';
 import { EmailCustomValidatorDirective } from './validators/directives/email-custom-validator.directive';
+import { EqualValidator } from './validators/directives/equal-validator.directive';
+
 
 @NgModule({
   declarations: [
     DialogueComponent,
     GooglePlacesDirective,
     VarDirective,
-    EmailCustomValidatorDirective
+    EmailCustomValidatorDirective,
+    EqualValidator
   ],
   imports: [
     CommonModule,
@@ -21,7 +24,8 @@ import { EmailCustomValidatorDirective } from './validators/directives/email-cus
     DialogueComponent,
     GooglePlacesDirective,
     VarDirective,
-    EmailCustomValidatorDirective
+    EmailCustomValidatorDirective,
+    EqualValidator
   ]
 })
 export class SharedModule { }
