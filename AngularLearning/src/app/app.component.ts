@@ -18,8 +18,8 @@ export class AppComponent {
         this.appState.state$.subscribe(state => {
             if (state["bodyClass"]) {
                 this.renderer.removeAttribute(document.body, "class");
-                this.renderer.removeClass(document.body, state["bodyClass"]);
-                this.renderer.addClass(document.body, state["bodyClass"]);
+                 this.renderer.removeClass(document.body, state["bodyClass"]);
+                 this.renderer.addClass(document.body, state["bodyClass"]);
             }
         });
     }
@@ -108,12 +108,13 @@ export class AppComponent {
                     }
                     return "underConstructionContainer";
                 default:
+                return '';
                     return "innerContainer";
 
             }
         }
 
-        return url == "/" ? "loginBgImage" : "innerContainer";
+       return url == "/" ? "loginBgImage" : "innerContainer";
 
     }
 }
