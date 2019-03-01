@@ -4,12 +4,11 @@ import { NgModule } from '@angular/core';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from 'ngx-icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'
-
 
 //************ Common Router section **********/
 
@@ -23,6 +22,7 @@ import { AppstatemanagerService } from './Services/appstate/appstatemanager.serv
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -32,6 +32,7 @@ import { AppstatemanagerService } from './Services/appstate/appstatemanager.serv
     BrowserAnimationsModule,
     FontAwesomeModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule
   ],

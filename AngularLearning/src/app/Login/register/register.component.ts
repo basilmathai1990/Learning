@@ -24,6 +24,7 @@ export class RegisterComponent implements OnInit {
       password: ['', Validators.required],
       cpassword: ['', Validators.required],
       address: ['', Validators.required],
+      dob: ['', Validators.required],
       idProofs: this.formBuilder.array([this.createItem()])
     });
   }

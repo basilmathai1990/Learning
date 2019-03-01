@@ -6,6 +6,9 @@ import { GooglePlacesDirective } from './directives/google/google-places.directi
 import { VarDirective } from './directives/var/var.directive';
 import { EmailCustomValidatorDirective } from './validators/directives/email-custom-validator.directive';
 import { EqualValidator } from './validators/directives/equal-validator.directive';
+import { CalenderComponent } from './components/calender/calender.component';
+import { SanitizehtmlPipe } from './pipes/sanitizehtml.pipe';
+
 
 
 @NgModule({
@@ -14,7 +17,9 @@ import { EqualValidator } from './validators/directives/equal-validator.directiv
     GooglePlacesDirective,
     VarDirective,
     EmailCustomValidatorDirective,
-    EqualValidator
+    EqualValidator,
+   // SanitizehtmlPipe,
+   // CalenderComponent
   ],
   imports: [
     CommonModule,

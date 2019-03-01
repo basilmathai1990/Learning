@@ -1,0 +1,98 @@
+<!-- <div id="datepicker" *ngIf="calenderVisible">
+  <h4 id="month-title">{{monthTitle}}</h4>
+  <input type="button" name="prev-y" (click)="findPrevYear()" value="Prev Year" id="prev-y" />
+  <span id=" year">{{year}}</span>
+  <input type="button" name="next-y" (click)="findNextYear()" value="Next Year" id="next-y" />
+
+  <table id="dt-able">
+    <tr>
+      <ng-container *ngFor="let item of ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']; let i = index;">
+        <th id='dt-head'>{{ item }}</th>
+      </ng-container>
+    </tr>
+    <ng-container *ngFor="let item of [0, 1, 2, 3, 4, 5]; let j = index;">
+      <tr id="row-{{j}}">
+        <ng-container *ngFor="let dayCount of daysFilterArray[j]; let h = index;">
+          <ng-container *ngIf="(dayCount) >=0;else newDeb">
+            <td id="cell-{{dayCount}}">
+              <input type='button' id='day_val {{dayCount}}' (click)='getVal(dayCount)'
+                value='{{formatSingleDigit(dayCount)}}' />
+            </td>
+          </ng-container>
+          <ng-template #newDeb>
+            <td> </td>
+          </ng-template>
+        </ng-container>
+      </tr>
+    </ng-container>
+  </table>
+
+  <input type="button" name="prev" (click)="findPrevMonth()" value="Prev Month" id="prev-month" />
+  <input type="button" name="next" (click)="findNextMonth()" value="Next Month" id="next-month" />
+
+</div> -->
+
+<!-- [innerHTML]="theHtmlString | sanitizeHtml" -->
+<!-- <ng-container *ngComponentOutlet="outlet; injector: dynamicComponentInjector"></ng-container> -->
+<!-- <tr>
+        <ng-container *ngFor="let item of ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']; let i = index;">
+          <td id='dt-head'> {{ item }}</td>
+        </ng-container>
+      </tr>
+      <ng-container *ngFor="let item of [0, 1, 2, 3, 4]; let j = index;">
+        <tr id="row-{{j}}">
+          <ng-container *ngFor="let item of [0, 1, 2, 3, 4, 6]; let h = index;">
+            <ng-container *ngIf="offset==0;else newDeb">
+              <ng-container *ngIf="dayCount >= lastDay.getDate()">
+                <td id="cell-{{dayCount}}">
+                  <input type='button' id='day_val {{dayCount}}' (click)='getVal(dayCount)' value='{{dayCount}}' />
+                  {{ await increamentor()}}
+                </td>
+              </ng-container>
+            </ng-container>
+            <ng-template #newDeb>
+              <td> </td>
+              {{await decrementor()}}
+            </ng-template>
+          </ng-container>
+        </tr>
+      </ng-container> -->
+
+
+<input type="datetime" id="datapicker" [attr.value]="value" (click)="makeVisible()" />
+<div class="jzdbox1 jzdbasf jzdcal" *ngIf="calenderVisible">
+
+
+  <div class="jzdcalt">
+    <a class="" href="javascript:void(0)" (click)="findPrevYear()">
+      << </a>  {{year}}  <a class=""  href="javascript:void(0)" (click)="findNextYear()"> >>
+    </a>
+  </div>
+
+  <div class="jzdcalt">
+    <a  href="javascript:void(0)" class=""  (click)="findPrevMonth()">
+      << </a>  {{monthTitle}}  <a class=""   href="javascript:void(0)" (click)="findNextMonth()"> >>
+    </a>
+  </div>
+
+  <div class="jzdcalt">
+
+    <ng-container *ngFor="let item of ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']; let i = index;">
+      <span>{{ item }}</span>
+    </ng-container>
+
+    <ng-container *ngFor="let item of [0, 1, 2, 3, 4, 5]; let j = index;">
+      <ng-container *ngFor="let dayCount of daysFilterArray[j]; let h = index;">
+        <ng-container *ngIf="(dayCount) >=0;else newDeb">
+          <!-- class="circle"
+          data-title="My 25th birthday!" -->
+          <a (click)='getVal(dayCount)'><span>{{formatSingleDigit(dayCount)}}</span></a>
+        </ng-container>
+        <ng-template #newDeb>
+          <span class="jzdb">
+            <!--BLANK--></span>
+        </ng-template>
+      </ng-container>
+    </ng-container>
+
+  </div>

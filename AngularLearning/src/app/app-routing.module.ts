@@ -6,6 +6,9 @@ import { FontAwesomeModule } from 'ngx-icons';
 
 //************ Layout section **********/
 import { Layoutcomponents } from './Shared/common/layoutcomponents';
+import { CalenderComponent } from './Shared/components/calender/calender.component';
+import { SanitizehtmlPipe } from './Shared/pipes/sanitizehtml.pipe';
+
 
 
 const routes: Routes = [
@@ -16,7 +19,11 @@ const routes: Routes = [
   {
     path: 'customer',
     loadChildren: './Customer/customer.module#CustomerModule'
-  }, 
+  },
+  {
+    path: 'calender',
+    component: CalenderComponent
+  },
   {
     path: '**',
     loadChildren: './Error/error.module#ErrorModule'
@@ -25,7 +32,10 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    Layoutcomponents
+    Layoutcomponents,
+    CalenderComponent,
+    SanitizehtmlPipe,
+    //DynamicComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +44,7 @@ const routes: Routes = [
     FontAwesomeModule,
     RouterModule.forRoot(routes, { useHash: true }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+ // entryComponents: [DynamicComponent]
 })
 export class AppRoutingModule { }
